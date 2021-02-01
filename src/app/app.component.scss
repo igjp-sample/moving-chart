@@ -1,0 +1,67 @@
+.title {
+    margin: 2% 3% 0;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        font-size: 20px;
+        margin: 0;
+        line-height: 1.5;
+    }
+    p {
+        margin: 0;
+        font-size: 12px;
+    }
+}
+
+.cell__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+}
+.slider {
+    padding: 1% 3%;
+    display: flex;
+    align-items: center;
+    p {
+        margin: 0 0 0 5%;
+    }
+}
+.athlete_name {
+    text-transform: capitalize;
+}
+.row {
+    padding: 1% 3%;
+    display: flex;
+    .column {
+        flex: 1;
+    }
+}
+:host {
+    ::ng-deep {
+        .up {
+            animation: up-keyframes 0.25s ease-in 0s infinite forwards;
+        }
+        .down {
+            animation: down-keyframes 0.25s ease-in 0s infinite forwards;
+        }
+        @keyframes up-keyframes {
+            0% {
+            background-color: rgba($color: #afeeee, $alpha: 1.0);
+            }
+            100% {
+                background-color: rgba($color: #afeeee, $alpha: 0);
+            }
+        }
+        @keyframes down-keyframes {
+            0% {
+            background-color: rgba($color: #ffb6c1, $alpha: 1.0);
+            }
+            100% {
+                background-color: rgba($color: #ffb6c1, $alpha: 0);
+            }
+        }
+    }
+}
